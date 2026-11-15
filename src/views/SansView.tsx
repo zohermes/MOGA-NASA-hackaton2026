@@ -154,7 +154,7 @@ export default function SansView({ heartRate, systolic, diastolic, days, onDays,
       const d = parseData(await f0.text()), { days: dd, co2: cc, mode: _m, ...rest } = d;
       if (dd !== undefined) onDays(dd);
       if (cc !== undefined) onCo2(cc);
-      setLoc(s => ({ ...s, ...rest }));
+      setLoc(s => ({ ...s, ...(rest as Partial<Local>) }));
       setMsg({ ok: true, text: tf('Datos importados: {1} variables.', 'Data imported: {1} variables.', Object.keys(d).length) });
     } catch {
       setMsg({ ok: false, text: t('No se pudo leer el archivo. Use JSON o CSV con claves como days, co2, oct_base, oct_now, onsd, flattening, onh, frisen, iop.', 'The file could not be read. Use JSON or CSV with keys such as days, co2, oct_base, oct_now, onsd, flattening, onh, frisen, iop.') });

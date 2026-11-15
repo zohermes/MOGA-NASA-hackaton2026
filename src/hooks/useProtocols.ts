@@ -127,7 +127,7 @@ export function useProtocols(tels: Telemetry[], active: number, actor: Actor, me
     },
     transmit: (crew: string, u?: string) => {
       const i = crewIdx(crew), queued = tels[i].link.mode === 'delayed', n = log.filter(x => x.crew === crew && (!u || x.uid === u)).length + 1;
-      setTx(a => [{ id: `tx-${uid()}`, t: Date.now(), crew, uid: u, status: queued ? 'queued' : 'sent', records: n }, ...a].slice(0, 100));
+      setTx(a => [{ id: `tx-${uid()}`, t: Date.now(), crew, uid: u, status: (queued ? 'queued' : 'sent') as Tx['status'], records: n }, ...a].slice(0, 100));
       addLog(crew, 'comm', actor, queued
         ? { es: 'Paquete clínico en cola: el enlace con Tierra está interrumpido y se enviará al restablecerse.', en: 'Clinical package queued: the link to Earth is interrupted and it will be sent once restored.' }
         : { es: 'Paquete clínico transmitido al equipo médico terrestre.', en: 'Clinical package transmitted to the ground medical team.' }, u);

@@ -997,4 +997,11 @@ export const TR: Record<string, [string, string, string]> = {
   "Existencias críticas: {1}.": ["Stocks critiques : {1}.", "Scorte critiche: {1}.", "Estoques críticos: {1}."],
   "NIVEL {1}": ["NIVEAU {1}", "LIVELLO {1}", "NÍVEL {1}"],
   "Otros problemas activos ({1})": ["Autres problèmes actifs ({1})", "Altri problemi attivi ({1})", "Outros problemas ativos ({1})"],
+  "Desplegar": ["Développer", "Espandi", "Expandir"],
+  "Ver el código en GitHub": ["Voir le code sur GitHub", "Vedi il codice su GitHub", "Ver o código no GitHub"],
+  "Ver el código fuente de MOGA en GitHub": ["Voir le code source de MOGA sur GitHub", "Vedi il codice sorgente di MOGA su GitHub", "Ver o código-fonte do MOGA no GitHub"],
+  "Ver la versión de escritorio de MOGA en GitHub": ["Voir la version de bureau de MOGA sur GitHub", "Vedi la versione desktop di MOGA su GitHub", "Ver a versão para desktop do MOGA no GitHub"],
+  "Versión de escritorio": ["Version de bureau", "Versione desktop", "Versão para desktop"],
+  "¿Sabías que existe una versión de escritorio que corre mucho mejor?": ["Saviez-vous qu'il existe une version de bureau bien plus performante ?", "Sapevi che esiste una versione desktop che funziona molto meglio?", "Você sabia que existe uma versão para desktop que roda muito melhor?"],
+  "Verla en GitHub": ["La voir sur GitHub", "Vedila su GitHub", "Ver no GitHub"],
 };

@@ -17,6 +17,7 @@ import { co2Level, o2Level } from './lib/station';
 import CmoView from './views/CmoView';
 import ClinicalView from './views/ClinicalView';
 import EmergencyModal from './components/EmergencyModal';
+import GithubLink from './components/GithubLink';
 import AlertToasts, { type Toast } from './components/AlertToasts';
 import OperatorConsole from './components/OperatorConsole';
 import { MessageInbox, MessageToasts } from './components/MessageInbox';
@@ -276,6 +277,7 @@ function Main() {
             : null}
         </div>
       </div>
+      {!entry && <GithubLink />}
     </MedicalContext.Provider>
   );
 }
